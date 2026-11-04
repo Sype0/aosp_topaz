@@ -1,0 +1,114 @@
+run: https://github.com/Sype0/aosp_topaz/actions/runs/41819205984
+attempt: 1  rc: 1  state: state-saved  time: 2026-11-04T15:41:12Z  minutes_left: 20
+/dev/root       145G   77G   69G  53% /
+/dev/loop0      300G   35G  264G  12% /build/src
+---- preparation ----
+== preparation, attempt 1 11:56:33
+Pruning prebuilts/clang/host/linux-x86/clang-r547379 (keeping: clang-r563880 clang-r563880c)
+Pruning prebuilts/clang/host/linux-x86/clang-r574158 (keeping: clang-r563880 clang-r563880c)
+Normalizing source mtimes
+No saved out/ state
+/dev/root       145G   61G   84G  43% /
+/dev/loop1      400G  5.8M  398G   1% /build/src/out
+Syncing missing projects: vendor/qcom/opensource/display
+Finalizing sync state...
+repo sync has finished successfully.
+cts present: yes
+---- errors ----
+348:FAILED: out/soong/build.aosp_topaz.ninja
+349-cd "$(dirname "out/host/linux-x86/bin/soong_build")" && BUILDER="$PWD/$(basename "out/host/linux-x86/bin/soong_build")" && cd / && env -i  "$BUILDER"     --top "$TOP"     --soong_out "out/soong"     --out "out"     --soong_variables out/soong/soong.aosp_topaz.variables -o out/soong/build.aosp_topaz.ninja --kati_suffix -aosp_topaz --kati_enabled -l out/.module_paths/Android.bp.list --available_env out/soong/soong.environment.available --used_env out/soong/soong.environment.used.aosp_topaz.build Android.bp
+350:error: vendor/qcom/opensource/commonsys-intf/display/Android.bp:7:18: unrecognized property "export_cflags"
+351:error: hardware/lineage/compat/Android.bp:679:1: module "prebuilt_libprotobuf-cpp-full-3.9.1-vendorcompat" already defined
+352-       prebuilts/misc/protobuf_vendorcompat/Android.bp:13:1 <-- previous definition here
+353:error: hardware/lineage/compat/Android.bp:702:1: module "prebuilt_libprotobuf-cpp-lite-3.9.1-vendorcompat" already defined
+354-       prebuilts/misc/protobuf_vendorcompat/Android.bp:38:1 <-- previous definition here
+355:error: hardware/lineage/compat/Android.bp:769:1: module "prebuilt_libprotobuf-cpp-full-21.12-vendorcompat" already defined
+356-       prebuilts/misc/protobuf_vendorcompat/Android.bp:62:1 <-- previous definition here
+357:error: hardware/lineage/compat/Android.bp:794:1: module "prebuilt_libprotobuf-cpp-lite-21.12-vendorcompat" already defined
+358-       prebuilts/misc/protobuf_vendorcompat/Android.bp:82:1 <-- previous definition here
+359-ninja: build stopped: subcommand failed.
+360-11:59:06 soong bootstrap failed with: exit status 1
+361-
+362-#### failed to build some targets (01:30 (mm:ss)) ####
+363-
+---- tail ----
+[ 77% 217/280] compile out/host/linux-x86/bin/go/soong-aconfig-build_flags/pkg/android/soong/aconfig/build_flags.a
+[ 77% 218/280] compile out/host/linux-x86/bin/go/soong-bloaty/pkg/android/soong/bloaty.a
+[ 78% 219/280] compile out/host/linux-x86/bin/go/soong-android-cipd/pkg/android/soong/android/cipd.a
+[ 78% 220/280] compile out/host/linux-x86/bin/go/soong-aconfig/pkg/android/soong/aconfig.a
+[ 78% 221/280] compile out/host/linux-x86/bin/go/soong-compliance/pkg/android/soong/compliance.a
+[ 79% 222/280] compile out/host/linux-x86/bin/go/soong-fuzz/pkg/android/soong/fuzz.a
+[ 79% 223/280] compile out/host/linux-x86/bin/go/soong-cc-config/pkg/android/soong/cc/config.a
+[ 80% 224/280] compile out/host/linux-x86/bin/go/soong-dexpreopt/pkg/android/soong/dexpreopt.a
+[ 80% 225/280] compile out/host/linux-x86/bin/go/soong-genrule/pkg/android/soong/genrule.a
+[ 80% 226/280] compile out/host/linux-x86/bin/go/soong-etc/pkg/android/soong/etc.a
+[ 81% 227/280] compile out/host/linux-x86/bin/go/soong-icu/pkg/android/soong/icu.a
+[ 81% 228/280] compile out/host/linux-x86/bin/go/soong-java-config/pkg/android/soong/java/config.a
+[ 81% 229/280] compile out/host/linux-x86/bin/go/soong-golang/pkg/android/soong/golang.a
+[ 82% 230/280] compile out/host/linux-x86/bin/go/soong-java-config-error_prone/pkg/android/soong/java/config/error_prone.a
+[ 82% 231/280] compile out/host/linux-x86/bin/go/soong-phony/pkg/android/soong/phony.a
+[ 82% 232/280] compile out/host/linux-x86/bin/go/soong-fs_config/pkg/android/soong/fs_config.a
+[ 83% 233/280] compile out/host/linux-x86/bin/go/soong-libchrome/pkg/android/soong/external/libchrome.a
+[ 83% 234/280] compile out/host/linux-x86/bin/go/soong-provenance/pkg/android/soong/provenance.a
+[ 83% 235/280] compile out/host/linux-x86/bin/go/soong-tradefed/pkg/android/soong/tradefed.a
+[ 84% 236/280] compile out/host/linux-x86/bin/go/soong-robolectric/pkg/android/soong/robolectric.a
+[ 84% 237/280] compile out/host/linux-x86/bin/go/soong-snapshot/pkg/android/soong/snapshot.a
+[ 85% 238/280] compile out/host/linux-x86/bin/go/soong-rust-config/pkg/android/soong/rust/config.a
+[ 85% 239/280] compile out/host/linux-x86/bin/go/soong-wayland-protocol-codegen/pkg/android/soong/external/wayland-protocol.a
+[ 85% 240/280] compile out/host/linux-x86/bin/go/soong-xml/pkg/android/soong/xml.a
+[ 86% 241/280] compile out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a
+[ 86% 242/280] compile out/host/linux-x86/bin/go/arm_compute_library_nn_driver/pkg/arm_compute_library_nn_driver.a
+[ 86% 243/280] compile out/host/linux-x86/bin/go/cuttlefish-soong-rules/pkg/android/soong/cuttlefish.a
+[ 87% 244/280] compile out/host/linux-x86/bin/go/soong-android-sdk/pkg/android/soong/android_sdk.a
+[ 87% 245/280] compile out/host/linux-x86/bin/go/soong-bpf/pkg/android/soong/bpf.a
+[ 87% 246/280] compile out/host/linux-x86/bin/go/soong-clang/pkg/android/soong/external/clang.a
+[ 88% 247/280] compile out/host/linux-x86/bin/go/soong-clang-prebuilts/pkg/android/soong/prebuilts/clang/host/linux-x86/clangprebuilts.a
+[ 88% 248/280] compile out/host/linux-x86/bin/go/soong-kernel/pkg/android/soong/kernel.a
+[ 88% 249/280] compile out/host/linux-x86/bin/go/soong-llvm/pkg/android/soong/external/llvm.a
+[ 89% 250/280] compile out/host/linux-x86/bin/go/soong-linkerconfig/pkg/android/soong/linkerconfig.a
+[ 89% 251/280] compile out/host/linux-x86/bin/go/soong-libbpf/pkg/android/soong/bpf/libbpf.a
+[ 90% 252/280] compile out/host/linux-x86/bin/go/soong-python/pkg/android/soong/python.a
+[ 90% 253/280] compile out/host/linux-x86/bin/go/soong-rust/pkg/android/soong/rust.a
+[ 90% 254/280] compile out/host/linux-x86/bin/go/soong-rust-prebuilts/pkg/android/soong/prebuilts/rust/rustprebuilts.a
+[ 91% 255/280] compile out/host/linux-x86/bin/go/soong-java/pkg/android/soong/java.a
+[ 91% 256/280] compile out/host/linux-x86/bin/go/hidl-soong-rules/pkg/android/soong/hidl.a
+[ 91% 257/280] compile out/host/linux-x86/bin/go/soong-ci-tests/pkg/android/soong/ci_tests.a
+[ 92% 258/280] compile out/host/linux-x86/bin/go/soong-api/pkg/android/soong/api.a
+[ 92% 259/280] compile out/host/linux-x86/bin/go/soong-csuite/pkg/android/soong/csuite.a
+[ 92% 260/280] compile out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
+[ 93% 261/280] compile out/host/linux-x86/bin/go/soong-aconfig-codegen/pkg/android/soong/aconfig/codegen.a
+[ 93% 262/280] compile out/host/linux-x86/bin/go/aidl-soong-rules/pkg/android/soong/aidl.a
+[ 93% 263/280] compile out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
+[ 94% 264/280] compile out/host/linux-x86/bin/go/soong-systemfeatures/pkg/android/soong/systemfeatures.a
+[ 94% 265/280] compile out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
+[ 95% 266/280] compile out/host/linux-x86/bin/go/soong-tradefed-modules/pkg/android/soong/tradefed_modules.a
+[ 95% 267/280] compile out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
+[ 95% 268/280] compile out/host/linux-x86/bin/go/soong-test_suites/pkg/android/soong/test_suites.a
+[ 96% 269/280] compile out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
+[ 96% 270/280] compile out/host/linux-x86/bin/go/soong-selinux/pkg/android/soong/selinux.a
+[ 96% 271/280] compile out/host/linux-x86/bin/go/soong-unbundled/pkg/android/soong/unbundled.a
+[ 97% 272/280] compile out/host/linux-x86/bin/go/vintf-compatibility-matrix-soong-rules/pkg/android/soong/vintf-compatibility-matrix.a
+[ 97% 273/280] compile out/host/linux-x86/bin/go/soong-fsgen/pkg/android/soong/fsgen.a
+[ 97% 274/280] compile out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
+[ 98% 275/280] compile out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
+[ 98% 276/280] compile out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
+[ 98% 277/280] compile out/host/linux-x86/bin/go/soong_build/pkg/soong_build.a
+[ 99% 278/280] link out/host/linux-x86/bin/go/soong_build/pkg/soong_build
+[ 99% 279/280] cp out/host/linux-x86/bin/soong_build
+[100% 280/280] analyzing Android.bp files and generating ninja file at out/soong/build.aosp_topaz.ninja
+FAILED: out/soong/build.aosp_topaz.ninja
+cd "$(dirname "out/host/linux-x86/bin/soong_build")" && BUILDER="$PWD/$(basename "out/host/linux-x86/bin/soong_build")" && cd / && env -i  "$BUILDER"     --top "$TOP"     --soong_out "out/soong"     --out "out"     --soong_variables out/soong/soong.aosp_topaz.variables -o out/soong/build.aosp_topaz.ninja --kati_suffix -aosp_topaz --kati_enabled -l out/.module_paths/Android.bp.list --available_env out/soong/soong.environment.available --used_env out/soong/soong.environment.used.aosp_topaz.build Android.bp
+error: vendor/qcom/opensource/commonsys-intf/display/Android.bp:7:18: unrecognized property "export_cflags"
+error: hardware/lineage/compat/Android.bp:679:1: module "prebuilt_libprotobuf-cpp-full-3.9.1-vendorcompat" already defined
+       prebuilts/misc/protobuf_vendorcompat/Android.bp:13:1 <-- previous definition here
+error: hardware/lineage/compat/Android.bp:702:1: module "prebuilt_libprotobuf-cpp-lite-3.9.1-vendorcompat" already defined
+       prebuilts/misc/protobuf_vendorcompat/Android.bp:38:1 <-- previous definition here
+error: hardware/lineage/compat/Android.bp:769:1: module "prebuilt_libprotobuf-cpp-full-21.12-vendorcompat" already defined
+       prebuilts/misc/protobuf_vendorcompat/Android.bp:62:1 <-- previous definition here
+error: hardware/lineage/compat/Android.bp:794:1: module "prebuilt_libprotobuf-cpp-lite-21.12-vendorcompat" already defined
+       prebuilts/misc/protobuf_vendorcompat/Android.bp:82:1 <-- previous definition here
+ninja: build stopped: subcommand failed.
+11:59:06 soong bootstrap failed with: exit status 1
+
+#### failed to build some targets (01:30 (mm:ss)) ####
+
