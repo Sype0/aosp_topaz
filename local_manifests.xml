@@ -41,6 +41,8 @@
     <project name="LineageOS/android_vendor_qcom_opensource_display-commonsys" path="vendor/qcom/opensource/commonsys/display" remote="gh" revision="lineage-23.2" />
     <project name="LineageOS/android_vendor_qcom_opensource_core-utils-sys" path="vendor/qcom/opensource/core-utils-sys" remote="gh" revision="lineage-23.2" />
     <project name="LineageOS/android_vendor_qcom_opensource_core-utils-vendor" path="vendor/qcom/opensource/core-utils-vendor" remote="gh" revision="lineage-23.2" />
+    <!-- Not built for bengal, but the sm6225 namespace imports it and Soong needs it to exist -->
+    <project name="LineageOS/android_vendor_qcom_opensource_display" path="vendor/qcom/opensource/display" remote="gh" revision="lineage-23.2" />
     <project name="LineageOS/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="gh" revision="lineage-23.2" />
     <project name="LineageOS/android_vendor_qcom_opensource_healthd-ext" path="vendor/qcom/opensource/healthd-ext" remote="gh" revision="lineage-23.2" />
     <project name="LineageOS/android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="gh" revision="lineage-23.2" />
