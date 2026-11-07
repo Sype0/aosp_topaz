@@ -1,0 +1,24 @@
+run: https://github.com/Sype0/aosp_topaz/actions/runs/42396287972  2026-11-07T17:35:26Z
+               total        used        free      shared  buff/cache   available
+Mem:           15983        1335         531          48       14511       14648
+Swap:          25599           0       25599
+NAME       TYPE      SIZE USED PRIO
+/dev/zram0 partition  20G  88K  100
+/swapfile  file        5G   0B   10
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   29G  116G  20% /
+---- monitor ----
+/dev/root         147719 27668    120036  19% /
+/dev/root         147719 27668    120036  19% /
+== 17:34:25 load=2.25 1.84 0.92
+Mem:           15983        1307         170          48       14901       14676
+Swap:          25599           0       25599
+/dev/root         147719 28049    119655  19% /
+/dev/root         147719 28049    119655  19% /
+== 17:35:25 load=1.68 1.78 0.96
+Mem:           15983        1371         293          48       14713       14612
+Swap:          25599           0       25599
+/dev/root         147719 29180    118523  20% /
+/dev/root         147719 29180    118523  20% /
+---- preparation ----
+---- build ----
