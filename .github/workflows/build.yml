@@ -1,4 +1,4 @@
-name: Build AOSP 16 (topaz)
+name: Build AOSP 17 (topaz)
 
 on:
   workflow_dispatch:
@@ -30,11 +30,12 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Android 16 QPR2, the same AOSP tag LineageOS 23.2 is based on
-  AOSP_TAG: android-16.0.0_r4
+  # Android 17, the AOSP tag LineageOS 24.0 / crDroid 17 and GrapheneOS 17 are based on
+  AOSP_TAG: android-17.0.0_r1
   DEVICE: topaz
   PRODUCT: aosp_topaz
-  RELEASE: bp4a
+  # aosp_current alias on android-17.0.0_r1
+  RELEASE: cp2a
   # GitHub kills the job at 360 min; leave room to save ccache + upload.
   JOB_BUDGET_MIN: 335
 
@@ -217,7 +218,7 @@ jobs:
         run: |
           zip=$(ls -t "$PRODUCT"-ota*.zip 2>/dev/null | head -1)
           [ -n "$zip" ] || { echo "::error::No OTA zip in $PWD"; ls; exit 1; }
-          out="AOSP-16-${DEVICE}-$(date +%Y%m%d)-${{ inputs.variant }}.zip"
+          out="AOSP-17-${DEVICE}-$(date +%Y%m%d)-${{ inputs.variant }}.zip"
           mv "$zip" "$out"
           files=("$out")
           for img in boot.img init_boot.img vendor_boot.img dtbo.img recovery.img vbmeta.img; do [ -f "$img" ] && files+=("$img"); done
@@ -225,8 +226,8 @@ jobs:
           files+=(SHA256SUMS)
           tag="${DEVICE}-$(date +%Y%m%d)-${{ github.run_number }}"
           gh release create "$tag" "${files[@]}" -R "$GITHUB_REPOSITORY" \
-            --title "AOSP 16 QPR2 $DEVICE $(date +%Y-%m-%d)" \
-            --notes "Plain AOSP $AOSP_TAG (${{ inputs.variant }}, test keys, no GApps). Built by run ${{ github.run_id }}. Flash the zip from recovery (adb sideload)."
+            --title "AOSP 17 $DEVICE $(date +%Y-%m-%d)" \
+            --notes "Plain AOSP $AOSP_TAG (${{ inputs.variant }}, test keys, no GApps). Built by run ${{ github.run_id }}. Flash the zip from recovery (adb sideload) after a format data. Bootloader stays UNLOCKED: never relock it on this Xiaomi."
 
       - name: Drop the saved out/ state
         if: success()
@@ -234,4 +235,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         # ci/sync.sh pins sources to the saved state; once the ROM is out the
         # next build should start from the latest sources.
-        run: gh release delete ci-out-state -R "$GITHUB_REPOSITORY" -y --cleanup-tag || true
+        run: gh release delete ci-out-state-17 -R "$GITHUB_REPOSITORY" -y --cleanup-tag || true

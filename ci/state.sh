@@ -1,6 +1,6 @@
 #!/bin/bash
 # Carry out/ between workflow runs as zstd-compressed tar chunks attached to the
-# "ci-out-state" release, so a build that runs out of job time continues next run.
+# "ci-out-state-17" release, so a build that runs out of job time continues next run.
 #   state.sh restore        normalize source mtimes, unpack a saved out/ except
 #                           the build outputs (BULK): the analysis does not need
 #                           them, and the disk they take is needed for swap
@@ -19,7 +19,7 @@
 # before generations, used while there is no generation.
 set -uo pipefail
 
-TAG=ci-out-state
+TAG=ci-out-state-17
 REPO=$GITHUB_REPOSITORY
 EPOCH=1577836800   # 2020-01-01: older than every restored output
 CHUNK=1900M        # release assets must be < 2 GiB

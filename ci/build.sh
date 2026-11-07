@@ -257,7 +257,7 @@ while :; do
         # so the next run rebuilt everything. Ninja logs every finished step.
         export SOONG_NINJA=ninja
         source build/envsetup.sh
-        lunch "${PRODUCT:-aosp_$DEVICE}-${RELEASE:-bp4a}-$VARIANT" || exit 1
+        lunch "${PRODUCT:-aosp_$DEVICE}-${RELEASE:-cp2a}-$VARIANT" || exit 1
         # Analysis (Soong/Kati) first, while the disk swap file is there; the
         # build after it needs the disk space more than the swap
         ensure_disk_swap

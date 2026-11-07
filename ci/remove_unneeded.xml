@@ -24,6 +24,8 @@
     <remove-project path="kernel/prebuilts/common-modules/virtual-device/6.12/x86-64" />
     <remove-project path="kernel/prebuilts/common-modules/virtual-device/mainline/arm64" />
     <remove-project path="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64" />
+    <remove-project path="kernel/prebuilts/common-modules/virtual-device/6.18/arm64" />
+    <remove-project path="kernel/prebuilts/common-modules/virtual-device/6.18/x86-64" />
     <remove-project path="device/amlogic/yukawa" />
     <remove-project path="device/amlogic/yukawa-kernel" />
     <remove-project path="device/linaro/dragonboard" />
