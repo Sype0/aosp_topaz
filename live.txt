@@ -1,0 +1,81 @@
+run: https://github.com/Sype0/aosp_topaz/actions/runs/42486566622  2026-11-08T16:07:11Z
+               total        used        free      shared  buff/cache   available
+Mem:           15983        6818        1649          24        7886        9164
+Swap:          20479        9543       10936
+NAME       TYPE      SIZE USED PRIO
+/dev/zram0 partition  20G 9.3G  100
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   91G   54G  63% /
+/dev/loop1      400G   40G  360G  11% /build/src/out
+---- monitor ----
+/dev/root         147719 92864     54839  63% /
+/dev/root         147719 92864     54839  63% /
+== 16:06:08 load=1.36 3.67 7.71
+Mem:           15983        6070        2400          24        7883        9913
+Swap:          20479        9544       10935
+/dev/root         147719 92864     54839  63% /
+/dev/root         147719 92864     54839  63% /
+== 16:07:08 load=1.52 3.31 7.34
+Mem:           15983        6818        1649          24        7886        9165
+Swap:          20479        9543       10936
+/dev/root         147719 92864     54839  63% /
+/dev/root         147719 92864     54839  63% /
+---- preparation ----
+== preparation, attempt 1 14:22:33
+prebuilts/clang/host/linux-x86/clang-r574158 is not in the synced tree, assuming it is unused
+Pruning prebuilts/clang/host/linux-x86/clang-r547379 (keeping: clang-r574158 clang-r584948 clang-r584948b)
+Pruning prebuilts/clang/host/linux-x86/clang-r563880c (keeping: clang-r574158 clang-r584948 clang-r584948b)
+Pruning prebuilts/clang/host/linux-x86/clang-r596125 (keeping: clang-r574158 clang-r584948 clang-r584948b)
+Pruning prebuilts/rust-toolchain/linux-musl-x86/1.91.1 (default is 1.93.1)
+Pruning prebuilts/rust-toolchain/linux-musl-x86/1.92.0 (default is 1.93.1)
+Pruning prebuilts/rust-toolchain/linux-x86/1.91.1 (default is 1.93.1)
+Pruning prebuilts/rust-toolchain/linux-x86/1.92.0 (default is 1.93.1)
+Normalizing source mtimes
+Saved state: s1794144161.
+Projects changed since the saved state: external/tinyxml
+Restoring out/ without the build outputs
+12G	out
+/dev/root       145G   62G   83G  43% /
+/dev/loop1      400G  626M  398G   1% /build/src/out
+cts present: yes
+---- build ----
+frameworks/base/wifi/java/src/android/net/wifi/nl80211/WifiNl80211Manager.java:933: warning: Could not resolve a class called 'com.android.server.wifi.SupplicantStaIfaceHal' as could not find a package or class called 'wifi' in 'package com.android.server' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:82: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.SEND_SMS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:90: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.RECEIVE_SMS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:98: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.READ_SMS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:106: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.RECEIVE_WAP_PUSH' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:114: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.RECEIVE_MMS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:140: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.READ_CELL_BROADCASTS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:156: warning: Could not resolve a class called 'SurfaceControl.Transaction' as could not find a package or class called 'SurfaceControl' in 'field Manifest.permission.APPLY_PICTURE_PROFILE' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:239: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.READ_EXTERNAL_STORAGE' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:359: warning: Could not resolve a class called 'Collection' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:359: warning: Could not resolve a class called 'ContentResolver' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:360: warning: Could not resolve a class called 'Collection' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:360: warning: Could not resolve a class called 'ContentResolver' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:361: warning: Could not resolve a class called 'Collection' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:361: warning: Could not resolve a class called 'ContentResolver' in 'field Manifest.permission.MANAGE_MEDIA' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:389: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.ACCESS_BACKGROUND_LOCATION' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:430: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.READ_CALL_LOG' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:447: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.WRITE_CALL_LOG' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:457: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.PROCESS_OUTGOING_CALLS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:552: warning: Could not resolve a class called 'PhoneAccountHandle' in 'field Manifest.permission.ACCEPT_HANDOVER' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:552: warning: Could not resolve a class called 'Uri' in 'field Manifest.permission.ACCEPT_HANDOVER' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:679: warning: Could not resolve a class called 'Set' in 'field Manifest.permission.BODY_SENSORS_BACKGROUND' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:3212: warning: Could not resolve a class called 'Intent' in 'field Manifest.permission.SEND_SHOW_SUSPENDED_APP_DETAILS' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:3288: warning: Could not resolve a class called 'android.view.WindowManager.LayoutsParams' as could not find a class called 'LayoutsParams' in 'class android.view.WindowManager' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:3426: warning: Could not resolve a class called 'PictureInPictureParams.Builder' as could not find a package or class called 'PictureInPictureParams' in 'field Manifest.permission.TV_IMPLICIT_ENTER_PIP' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:3427: warning: Could not resolve a class called 'Activity' in 'field Manifest.permission.TV_IMPLICIT_ENTER_PIP' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:3427: warning: Could not resolve a class called 'Activity' in 'field Manifest.permission.TV_IMPLICIT_ENTER_PIP' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:4216: warning: Could not resolve a class called 'android.view.WindowManager.LayoutsParams' as could not find a class called 'LayoutsParams' in 'class android.view.WindowManager' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:6145: warning: Could not resolve a class called 'DomainVerificationManager' in 'field Manifest.permission.QUERY_DOMAIN_VERIFICATION' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:6146: warning: Could not resolve a class called 'DomainVerificationManager' in 'field Manifest.permission.QUERY_DOMAIN_VERIFICATION' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:7068: warning: Could not resolve a class called 'Intent' in 'field Manifest.permission.SEND_DEVICE_CUSTOMIZATION_READY' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:7074: warning: Could not resolve a class called 'Intent' in 'field Manifest.permission.RECEIVE_DEVICE_CUSTOMIZATION_READY' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/Manifest.java:7099: warning: Could not resolve a class called 'Intent' in 'field Manifest.permission.REVIEW_ACCESSIBILITY_SERVICES' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/R.java:1139: warning: Could not resolve a class called 'Intent' in 'field R.attr.attributionTags' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/R.java:2335: warning: Could not resolve a class called 'View' in 'field R.attr.clipToOutline' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/R.java:12011: warning: Could not resolve a class called 'Matrix' in 'field R.attr.scaleType' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/R.java:14011: warning: Could not resolve a class called 'MotionEvent' in 'field R.attr.supportsStylusHandwriting' (ErrorWhenNew) [UnresolvedLink]
+out/srcjars/android/R.java:15982: warning: @FlaggedApi flag android.service.dreams.user_selectable_metadata is not exported (ErrorWhenNew) [UnexportedFlaggedApi]
+out/srcjars/android/R.java:16049: warning: Could not resolve a class called 'Activity' in 'field R.attr.usesPermissionFlags' (ErrorWhenNew) [UnresolvedLink]
+[ 99% 7307/7309] //frameworks/base/api:system-api-stubs-docs-non-updatable check current API
